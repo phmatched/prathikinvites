@@ -6,7 +6,7 @@ folder completely empty. Every filename below is OPTIONAL. The moment you add
 one, the page detects it and cross-fades the photograph over the drawing.
 Nothing else needs editing.
 
-  hero.jpg              the couple, portrait crop (tall)      ~1200 x 1600
+  couple.jpg            the couple, portrait crop (tall)      ~1200 x 1600
   story-1.jpg           chapter one                            ~1200 x 1500
   story-2.jpg           chapter two                            ~1200 x 1500
   story-3.jpg           chapter three                          ~1200 x 1500
