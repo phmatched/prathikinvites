@@ -5,7 +5,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>Prathik &amp; Harshitha — 23 December 2026, Udupi</title>
-<meta name="description" content="Together with their families, Prathik &amp; Harshitha invite you to their wedding — the Dhare muhurta at 11:28 AM on Wednesday, 23 December 2026, in Udupi, Karnataka." />
+<meta name="description" content="Together with their families, Prathik &amp; Harshitha invite you to their wedding — the Dhaare muhurta at 11:28 AM on Wednesday, 23 December 2026, in Udupi, Karnataka." />
 <meta name="theme-color" content="#12352F" />
 <meta name="color-scheme" content="light" />
 
@@ -13,7 +13,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Prathik &amp; Harshitha" />
 <meta property="og:title" content="Prathik &amp; Harshitha — 23 December 2026, Udupi" />
-<meta property="og:description" content="Madhrengi · Arishina · Dhare · Reception — Mangaluru &amp; Udupi, Karnataka. Please open your invitation." />
+<meta property="og:description" content="Madhrengi · Arishina · Dhaare · Reception — Mangaluru &amp; Udupi, Karnataka. Please open your invitation." />
 <meta property="og:image" content="assets/og-image.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -687,6 +687,12 @@ footer .credit{margin-top:60px;font-size:10.5px;letter-spacing:.26em;text-transf
   .event{grid-template-columns:1fr;min-height:0}
   .event .ev-photo{height:52vh;height:52svh;order:0!important}
   .event:nth-of-type(even) .ev-photo{order:0}
+  /* the body padding shrinks past the rule's 26px inset here (to 20px under
+     400px), which would drag the hairline in behind the text — pull it out to
+     the panel edge, and drop the left/right alternation now that the two
+     columns have stacked into one */
+  .event:nth-of-type(odd) .ev-body::before{left:12px}
+  .event:nth-of-type(even) .ev-body::before{right:auto;left:12px}
   .venue-art{height:60vh;height:60svh}
   .venue-panel{margin:-9vh 18px 0;margin:-9svh 18px 0}
 }
@@ -1148,7 +1154,7 @@ a:focus,button:focus,input:focus,select:focus,textarea:focus{outline-offset:3px}
     <div class="scratch-under">
       <span class="s-eyebrow">Save The Date</span>
       <span class="s-date" id="sDate">23 December 2026</span>
-      <span class="s-muhurat" id="sMuhurat">Dhare Muhurta · 11:28 AM</span>
+      <span class="s-muhurat" id="sMuhurat">Dhaare Muhurta · 11:28 AM</span>
     </div>
     <canvas id="scratchCv" aria-label="Scratch to reveal the wedding date"></canvas>
   </div>
@@ -1167,7 +1173,7 @@ a:focus,button:focus,input:focus,select:focus,textarea:focus{outline-offset:3px}
 
   <div class="count-foot">
     <span class="rule"></span>
-    <p id="cdFoot">Until the dhare in Udupi</p>
+    <p id="cdFoot">Until the dhaare in Udupi</p>
   </div>
 </section>
 
@@ -1276,8 +1282,8 @@ const CONFIG = {
   muhurta:      "2026-12-23T11:28:00+05:30", // drives the countdown
   dateLabel:    "23 December 2026",
   dateTease:    "December 2026",                // shown before the scratch reveal
-  muhurtaShort: "Dhare Muhurta · 11:28 AM",
-  countdownFoot:"Until the dhare in Udupi",
+  muhurtaShort: "Dhaare Muhurta · 11:28 AM",
+  countdownFoot:"Until the dhaare in Udupi",
 
   /* ---------- where the wishes wall posts ---------- */
   // "" = DEMO MODE (saves to this browser only, nothing leaves the device).
@@ -1292,7 +1298,7 @@ const CONFIG = {
   /* ---------- the venue of the wedding day ---------- */
   venue: {
     name: "Townhall Udupi",
-    addr: "Sri Aroor Lakshminarayana Rao Memorial Town Hall, Brahmagiri, Udupi. The dhare is poured here, and the reception follows in the same hall.",
+    addr: "Sri Aroor Lakshminarayana Rao Memorial Town Hall, Brahmagiri, Udupi. The dhaare is poured here, and the reception follows in the same hall.",
     maps: "Sri Aroor Lakshminarayana Rao Memorial Hall, Udupi"
   },
 
@@ -1300,7 +1306,7 @@ const CONFIG = {
   events: [
     { key:"madhrengi", kan:"ಮಧರೆಂಗಿ", ghost:"ಮಧರೆಂಗಿ",
       name:"Madhrengi", art:"evMadhrengi", img:"assets/event-madhrengi.jpg",
-      desc:"Henna, music, and every cousin with a song they have been rehearsing since the monsoon. An easy evening before the long day \u2014 come hungry and stay late.",
+      desc:"Let the music play, the lights sparkle, and the celebrations begin. With hearts full of joy and excitement, we invite you to join us for an evening of dance, music, laughter and endless sparkle.",
       date:"Tuesday, 22 December 2026", time:"6:00 PM onwards",
       venue:"Hotel Pooja Parivar", venueSub:"Kinnigoli Road, Haleangadi",
       dress:"",
@@ -1309,17 +1315,17 @@ const CONFIG = {
 
     { key:"arishina", kan:"ಅರಿಶಿನ", ghost:"ಅರಿಶಿನ",
       name:"Arishina Shastra", art:"evArishina", img:"assets/event-arishina.jpg",
-      desc:"Turmeric, coconut oil and a great deal of laughter, before the sun is properly up. The elders anoint him, the youngsters make sure none of it stays neat, and nobody leaves unmarked.",
+      desc:"With the first rays of sunshine and the golden glow of haldi, we invite you to join us for a morning filled with love, laughter and blessings.",
       date:"Wednesday, 23 December 2026", time:"6:30 AM onwards",
       venue:"Panchawati House", venueSub:"Mukka Checkpost, Mangaluru",
       dress:"",
       maps:"Mukka Checkpost, Mangaluru",
       start:"2026-12-23T06:30:00+05:30", end:"2026-12-23T09:00:00+05:30" },
 
-    { key:"dhare", kan:"ದಾರೆ", ghost:"ದಾರೆ",
-      name:"Dhare", art:"evDhare", img:"assets/event-dhare.jpg",
-      desc:"The heart of it. A gold nanya rests in Harshitha's palm, Prathik's hands close over hers, and her parents pour the holy water from the chembu — the kombu sounds, and the mangalsutra is tied.",
-      date:"Wednesday, 23 December 2026", time:"Dhare Muhurta 11:28 AM",
+    { key:"dhare", kan:"ಧಾರೆ", ghost:"ಧಾರೆ",
+      name:"Dhaare", art:"evDhare", img:"assets/event-dhare.jpg",
+      desc:"As sacred water flows, two lives are blessed to flow together. A promise is made, a new journey begins, and the Karimani is tied as a sacred mark of love, commitment, and togetherness.",
+      date:"Wednesday, 23 December 2026", time:"Dhaare Muhurta 11:28 AM",
       venue:"Townhall Udupi", venueSub:"Sri Aroor Lakshminarayana Rao Memorial Town Hall · Brahmagiri, Udupi",
       dress:"Traditional",
       maps:"Sri Aroor Lakshminarayana Rao Memorial Hall, Udupi",
@@ -1338,7 +1344,7 @@ const CONFIG = {
   /* ---------- seed wishes (a wall is never shown empty) ---------- */
   seedWishes: [
     { name:"Sharada Kamath", when:"4 Sep 2026",
-      msg:"May the water poured at your dhare keep you cool-headed and warm-hearted for the rest of your lives. We have watched you grow up, Prathik \u2014 bringing Harshitha home is the best thing you have done yet." },
+      msg:"May the water poured at your dhaare keep you cool-headed and warm-hearted for the rest of your lives. We have watched you grow up, Prathik \u2014 bringing Harshitha home is the best thing you have done yet." },
     { name:"Deepika Rai", when:"12 Sep 2026",
       msg:"Harshitha, I have never seen you laugh the way you do around him. That is all a friend really needs to know. A lifetime of it to you both." },
     { name:"Sudhakar & Vasanthi Pai", when:"19 Sep 2026",
