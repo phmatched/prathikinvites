@@ -13,10 +13,10 @@ Nothing else needs editing.
   venue.jpg             the mantapa, landscape                 ~2000 x 1300
   closing.jpg           the closing quote background           ~2000 x 1300
 
-  event-madarengi.jpg   one per celebration                    ~1400 x 1600
-  event-arishina.jpg
-  event-dhare.jpg
-  event-reception.jpg
+  event-madhrengi.png   one per celebration — these four are PNG, not JPG:
+  event-arishina.png    they are cut-out illustrations on a transparent
+  event-dhare.png       background, laid over the event's own tint. Keep the
+  event-reception.png   transparency and trim the empty margin before export.
 
   gallery-1.jpg  …  gallery-8.jpg     the album                ~1400 wide
 
