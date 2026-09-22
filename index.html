@@ -155,6 +155,29 @@ section{position:relative;padding:clamp(88px,12vw,168px) clamp(22px,7vw,110px)}
   opacity:0;transition:opacity 1.1s var(--ease);
 }
 .frame img.shown{opacity:1}
+
+/* --- cut-out figures: an illustration that stands in the scene, not over it -- */
+/* The art below keeps showing through the transparent PNG, so the panel never
+   turns into a pasted box. The scrim quiets the props directly behind it.     */
+.frame .figure{
+  position:absolute;inset:0;z-index:2;overflow:hidden;
+  display:flex;align-items:flex-end;justify-content:center;
+}
+.frame .fig-scrim{
+  position:absolute;left:50%;bottom:-6%;width:128%;height:104%;
+  transform:translateX(-50%);
+  background:radial-gradient(54% 50% at 50% 60%,var(--fig-scrim,transparent),transparent 74%);
+}
+.frame .figure img{
+  position:relative;inset:auto;width:auto;height:auto;
+  max-width:var(--fig-w,86%);max-height:var(--fig-h,84%);
+  object-fit:contain;margin-bottom:var(--fig-drop,4%);
+  filter:drop-shadow(0 22px 26px var(--fig-shadow,rgba(20,14,8,.3)));
+  opacity:0;transform:translateY(20px);
+  transition:opacity 1.2s var(--ease),transform 1.5s var(--ease);
+}
+.frame .figure img.shown{opacity:1;transform:none}
+
 .frame .veil{
   position:absolute;inset:0;background:var(--shell);
   transform:scaleY(1);transform-origin:top;z-index:3;
@@ -508,32 +531,41 @@ header.hero{
 .event[data-tint="madhrengi"] .ev-act:hover,.event[data-tint="reception"] .ev-act:hover{background:var(--gold-soft);color:var(--night)}
 
 /* --- the four portraits --------------------------------------------------
-   these are cut-out illustrations rather than photographs, so they are laid
-   on a flat tone drawn from the event's own tint — the picture half and the
-   text half then read as one panel instead of two. `contain` keeps the
-   figure whole (`cover` would crop heads and feet), and the SVG scene fades
-   out only once the artwork has actually loaded, so it stays the fallback */
-.event .ev-photo .frame img{
-  object-fit:contain;
-  padding:clamp(20px,4.5vw,58px);
-  filter:drop-shadow(0 20px 32px rgba(32,20,8,.24));
+   these are cut-out illustrations rather than photographs, so they stand
+   inside the panel's own SVG scene instead of replacing it: the art keeps
+   showing through the transparent PNG, a scrim in the panel's colour quiets
+   the props directly behind the figure, and a drop shadow cast in that same
+   light sets the figure off the backdrop rather than pasting it flat on.
+   Each figure gets a size and a footing that suit how it was drawn: the width
+   and height are caps, so the broad ones are held by --fig-w and the tall ones
+   by --fig-h, and --fig-drop lifts a figure whose own base is its ground. */
+
+/* 820x676 — the couple seated on a platform, so the platform is the floor */
+.event[data-tint="madhrengi"] .ev-photo .frame{
+  --fig-w:90%;--fig-h:74%;--fig-drop:6%;
+  --fig-scrim:rgba(74,52,33,.88);--fig-shadow:rgba(0,0,0,.52);
 }
-.event .ev-photo .px:has(img.shown) .art{opacity:0;transition:opacity 1.1s var(--ease)}
+/* 380x820 — a narrow standing figure; height is what binds it */
+.event[data-tint="arishina"] .ev-photo .frame{
+  --fig-w:68%;--fig-h:86%;--fig-drop:2%;
+  --fig-scrim:rgba(253,246,222,.82);--fig-shadow:rgba(146,104,28,.28);
+}
+/* 820x787 — near square, and it carries its own ring, so leave the arch room */
+.event[data-tint="dhare"] .ev-photo .frame{
+  --fig-w:86%;--fig-h:84%;--fig-drop:3%;
+  --fig-scrim:rgba(252,249,244,.86);--fig-shadow:rgba(122,90,56,.26);
+}
+/* 644x820 — tall standing pair; kept short of the top so the chandelier reads */
+.event[data-tint="reception"] .ev-photo .frame{
+  --fig-w:74%;--fig-h:84%;--fig-drop:3%;
+  --fig-scrim:rgba(30,80,69,.88);--fig-shadow:rgba(0,0,0,.52);
+}
 
-.event[data-tint="madhrengi"] .ev-photo .frame{background:
-  radial-gradient(ellipse 74% 58% at 50% 60%,rgba(231,199,138,.10),transparent 72%),#291F15}
-.event[data-tint="arishina"] .ev-photo .frame{background:
-  radial-gradient(ellipse 74% 58% at 50% 60%,rgba(255,252,240,.62),transparent 72%),#F9ECC9}
-.event[data-tint="dhare"] .ev-photo .frame{background:
-  radial-gradient(ellipse 74% 58% at 50% 60%,rgba(255,255,255,.66),transparent 72%),#F8EFE5}
-.event[data-tint="reception"] .ev-photo .frame{background:
-  radial-gradient(ellipse 74% 58% at 50% 60%,rgba(190,225,205,.10),transparent 72%),#12332D}
-
-/* the reveal curtain wipes from the panel's own tone, not the default cream */
-.event[data-tint="madhrengi"] .ev-photo .veil{background:#291F15}
-.event[data-tint="arishina"]  .ev-photo .veil{background:#F9ECC9}
-.event[data-tint="dhare"]     .ev-photo .veil{background:#F8EFE5}
-.event[data-tint="reception"] .ev-photo .veil{background:#12332D}
+/* the reveal curtain wipes from the scene's own top tone, not the default cream */
+.event[data-tint="madhrengi"] .ev-photo .veil{background:#3A2A1B}
+.event[data-tint="arishina"]  .ev-photo .veil{background:#FBF0D2}
+.event[data-tint="dhare"]     .ev-photo .veil{background:#FCF6ED}
+.event[data-tint="reception"] .ev-photo .veil{background:#1A463D}
 
 .ev-ghost{
   position:absolute;right:-14px;bottom:-52px;font-family:var(--kan);
@@ -752,6 +784,7 @@ footer .credit{margin-top:60px;font-size:10.5px;letter-spacing:.26em;text-transf
   .line>span{transform:none!important;opacity:1!important;filter:none!important}
   .frame .veil{display:none}
   .frame img{transform:none!important}
+  .frame .figure img{opacity:1!important}
   .scroll-cue i{animation:none}
   .coin::after{animation:none}
   .arch-orn{opacity:.75!important;transform:none!important}
@@ -1347,7 +1380,7 @@ const CONFIG = {
   /* ---------- the celebrations ---------- */
   events: [
     { key:"madhrengi", kan:"ಮಧರೆಂಗಿ", ghost:"ಮಧರೆಂಗಿ",
-      name:"Madhrengi", art:"evMadhrengi", img:"assets/event-madhrengi.png",
+      name:"Madhrengi", art:"evMadhrengi", fig:"assets/event-madhrengi",
       desc:"Let the music play, the lights sparkle, and the celebrations begin. With hearts full of joy and excitement, we invite you to join us for an evening of dance, music, laughter and endless sparkle.",
       note:"Your presence will make our celebration sparkle even brighter.",
       date:"Tuesday, 22 December 2026", time:"6:00 PM onwards",
@@ -1357,7 +1390,7 @@ const CONFIG = {
       start:"2026-12-22T18:00:00+05:30", end:"2026-12-22T23:00:00+05:30" },
 
     { key:"arishina", kan:"ಅರಿಶಿನ", ghost:"ಅರಿಶಿನ",
-      name:"Arishina Shastra", art:"evArishina", img:"assets/event-arishina.png",
+      name:"Arishina Shastra", art:"evArishina", fig:"assets/event-arishina",
       desc:"With the first rays of sunshine and the golden glow of haldi, we invite you to join us for a morning filled with love, laughter and blessings.",
       note:"Let us bloom, glow and celebrate together.",
       date:"Wednesday, 23 December 2026", time:"6:30 AM onwards",
@@ -1367,7 +1400,7 @@ const CONFIG = {
       start:"2026-12-23T06:30:00+05:30", end:"2026-12-23T09:00:00+05:30" },
 
     { key:"dhare", kan:"ಧಾರೆ", ghost:"ಧಾರೆ",
-      name:"Dhaare", art:"evDhare", img:"assets/event-dhare.png",
+      name:"Dhaare", art:"evDhare", fig:"assets/event-dhare",
       desc:"As sacred water flows, two lives are blessed to flow together. A promise is made, a new journey begins, and the Karimani is tied as a sacred mark of love, commitment, and togetherness.",
       note:"A cherished moment where two hearts unite, embracing a lifetime of shared dreams, love, and blessings.",
       date:"Wednesday, 23 December 2026", time:"Dhaare Muhurta 11:28 AM",
@@ -1377,7 +1410,7 @@ const CONFIG = {
       start:"2026-12-23T10:30:00+05:30", end:"2026-12-23T15:00:00+05:30" },
 
     { key:"reception", kan:"ಆರತಕ್ಷತೆ", ghost:"ಆರತಕ್ಷತೆ",
-      name:"Reception", art:"evReception", img:"assets/event-reception.png",
+      name:"Reception", art:"evReception", fig:"assets/event-reception",
       desc:"No need to go anywhere or change a thing — lunch flows straight into the reception, right there in the same hall. Blessings, photographs, and a plate that keeps finding its way back to full.",
       date:"Wednesday, 23 December 2026", time:"1:00 PM onwards",
       venue:"Townhall Udupi", venueSub:"Sri Aroor Lakshminarayana Rao Memorial Town Hall · Brahmagiri, Udupi",
@@ -1856,6 +1889,29 @@ const Motion = (function () {
 /* ==========================================================================
    FRAMES — draw the art, then fade a photo over it if one exists
    ========================================================================== */
+/* A cut-out figure is tried in each type in turn and the first that decodes is
+   the one that hangs in the panel — put ".webp" ahead of ".png" here the day a
+   webp is exported, and a browser too old for it still gets the illustration.
+   It is decorative: the panel beside it already names the celebration and the
+   dress, so an alt here would only make a screen reader say it all twice. */
+const FIG_TYPES = [".png"];
+
+function loadFigure(name, wrap) {
+  (function attempt(i) {
+    if (i >= FIG_TYPES.length) return;   // none of them loaded: the art stays
+    const src = name + FIG_TYPES[i], probe = new Image();
+    probe.onload = function () {
+      const im = document.createElement("img");
+      im.alt = ""; im.setAttribute("aria-hidden", "true");
+      im.decoding = "async"; im.loading = "lazy"; im.src = src;
+      wrap.appendChild(im);
+      requestAnimationFrame(function () { im.classList.add("shown"); });
+    };
+    probe.onerror = function () { attempt(i + 1); };
+    probe.src = src;
+  })(0);
+}
+
 function hydrateFrame(frame) {
   const fx = document.createElement("div"); fx.className = "fx";
   const inner = document.createElement("div"); inner.className = "px";
@@ -1880,6 +1936,15 @@ function hydrateFrame(frame) {
     };
     probe.onerror = function () { /* no photo yet — the art stays, which is the point */ };
     probe.src = src;
+  }
+
+  const fig = frame.dataset.fig;
+  if (fig) {
+    const wrap = document.createElement("div"); wrap.className = "figure";
+    const scrim = document.createElement("span"); scrim.className = "fig-scrim";
+    wrap.appendChild(scrim);
+    frame.appendChild(wrap);
+    loadFigure(fig, wrap);
   }
   if (frame.dataset.parallax) Motion.parallax(frame);
   return fx;
@@ -1944,7 +2009,9 @@ function renderEvents() {
   const n = CONFIG.events.length;
   $("#eventList").innerHTML = CONFIG.events.map(function (ev, i) {
     return '<article class="event" data-tint="' + esc(ev.key) + '">' +
-      '<div class="ev-photo"><div class="frame" data-art="' + esc(ev.art) + '" data-img="' + esc(ev.img) + '" data-parallax="8" data-alt="' + esc(ev.name) + '"><div class="veil"></div></div></div>' +
+      '<div class="ev-photo"><div class="frame" data-art="' + esc(ev.art) + '"' +
+        (ev.fig ? ' data-fig="' + esc(ev.fig) + '"' : "") +
+        ' data-parallax="8"><div class="veil"></div></div></div>' +
       '<div class="ev-body">' +
         '<span class="ev-ghost" aria-hidden="true">' + esc(ev.ghost) + '</span>' +
         '<div class="ev-motif" aria-hidden="true">' + ART.motif(ev.key) + '</div>' +
