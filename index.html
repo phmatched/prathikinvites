@@ -13,7 +13,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Prathik &amp; Harshitha" />
 <meta property="og:title" content="Prathik &amp; Harshitha — 23 December 2026, Udupi" />
-<meta property="og:description" content="Madarengi · Arishina · Dhare · Reception — near Mangaluru &amp; in Udupi, Karnataka. Please open your invitation." />
+<meta property="og:description" content="Madhrengi · Arishina · Dhare · Reception — Mangaluru &amp; Udupi, Karnataka. Please open your invitation." />
 <meta property="og:image" content="assets/og-image.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
@@ -490,16 +490,16 @@ header.hero{
 .ev-body>*{position:relative;z-index:2}
 
 .event[data-tint="nischaya"]  .ev-body{background:linear-gradient(160deg,#F0F4E6,#E4EDD6)}
-.event[data-tint="madarangi"] .ev-body{background:linear-gradient(165deg,#2E2318,#241B12);color:#F2EADF}
+.event[data-tint="madhrengi"] .ev-body{background:linear-gradient(165deg,#2E2318,#241B12);color:#F2EADF}
 .event[data-tint="arishina"]  .ev-body{background:linear-gradient(160deg,#FBF2D6,#F6E7BC)}
 .event[data-tint="dhare"]     .ev-body{background:linear-gradient(160deg,#FBF6EE,#F4E8DC)}
 .event[data-tint="reception"] .ev-body{background:linear-gradient(165deg,#153B34,#102B26);color:var(--shell)}
-.event[data-tint="madarangi"] .ev-desc,.event[data-tint="reception"] .ev-desc{color:#C9BEB0}
+.event[data-tint="madhrengi"] .ev-desc,.event[data-tint="reception"] .ev-desc{color:#C9BEB0}
 .event[data-tint="reception"] .ev-desc{color:#B9CBBF}
-.event[data-tint="madarangi"] .ev-meta dt,.event[data-tint="reception"] .ev-meta dt{color:var(--gold-soft)}
-.event[data-tint="madarangi"] .ev-motif svg,.event[data-tint="reception"] .ev-motif svg{stroke:var(--gold-soft)}
-.event[data-tint="madarangi"] .ev-act,.event[data-tint="reception"] .ev-act{color:var(--gold-soft);border-color:rgba(205,174,114,.6)}
-.event[data-tint="madarangi"] .ev-act:hover,.event[data-tint="reception"] .ev-act:hover{background:var(--gold-soft);color:var(--night)}
+.event[data-tint="madhrengi"] .ev-meta dt,.event[data-tint="reception"] .ev-meta dt{color:var(--gold-soft)}
+.event[data-tint="madhrengi"] .ev-motif svg,.event[data-tint="reception"] .ev-motif svg{stroke:var(--gold-soft)}
+.event[data-tint="madhrengi"] .ev-act,.event[data-tint="reception"] .ev-act{color:var(--gold-soft);border-color:rgba(205,174,114,.6)}
+.event[data-tint="madhrengi"] .ev-act:hover,.event[data-tint="reception"] .ev-act:hover{background:var(--gold-soft);color:var(--night)}
 
 .ev-ghost{
   position:absolute;right:-14px;bottom:-52px;font-family:var(--kan);
@@ -570,33 +570,6 @@ header.hero{
 .venue-pad{height:clamp(84px,12vw,150px)}
 
 /* ==========================================================================
-   TRAVEL & STAY
-   ========================================================================== */
-.travel{background:var(--shell)}
-.travel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(268px,1fr));gap:clamp(18px,2.4vw,28px);max-width:1180px;margin:0 auto}
-.tcard{
-  position:relative;background:var(--mallige);border:1px solid rgba(176,136,66,.3);
-  padding:30px 28px 28px;display:flex;flex-direction:column;
-  transition:transform .6s var(--ease),box-shadow .6s var(--ease);
-}
-.tcard:hover{transform:translateY(-5px);box-shadow:0 22px 48px rgba(46,42,33,.12)}
-.tcard .ticon{width:40px;height:40px;margin-bottom:18px;stroke:var(--gold);fill:none;stroke-width:1.15;stroke-linecap:round;stroke-linejoin:round}
-.tcard .tkind{font-size:9.5px;letter-spacing:.36em;text-transform:uppercase;color:var(--gold);margin-bottom:9px}
-.tcard h4{font-family:var(--serif);font-weight:400;font-size:23px;line-height:1.25;letter-spacing:.03em;margin-bottom:9px}
-.tcard p{font-size:14px;line-height:1.75;color:var(--ink-soft);margin-bottom:16px;flex:1}
-.tcard .tdist{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);opacity:.75;margin-bottom:16px}
-.tcard .tlink{
-  font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold);
-  border-bottom:1px solid var(--gold);padding-bottom:5px;width:max-content;
-  transition:color .45s,border-color .45s;
-}
-.tcard .tlink:hover{color:var(--ink);border-color:var(--ink)}
-.travel-note{
-  max-width:660px;margin:clamp(38px,5vw,60px) auto 0;text-align:center;
-  font-family:var(--serif-soft);font-style:italic;font-size:17px;line-height:1.7;color:var(--ink-soft);
-}
-
-/* ==========================================================================
    FORM PRIMITIVES — shared by the wishes wall
    ========================================================================== */
 .field{display:flex;flex-direction:column;gap:8px}
@@ -644,26 +617,6 @@ header.hero{
 .wish .wmeta{display:block;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:#8FA096;margin-top:5px}
 .wish.fresh{animation:wishIn .8s var(--ease) both}
 @keyframes wishIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
-
-/* ==========================================================================
-   FAQ
-   ========================================================================== */
-.faq{background:var(--shell-deep)}
-.faq-list{max-width:780px;margin:0 auto}
-.faq-item{border-bottom:1px solid rgba(176,136,66,.34)}
-.faq-item:first-child{border-top:1px solid rgba(176,136,66,.34)}
-.faq-q{
-  width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;
-  padding:26px 4px;text-align:left;font-family:var(--serif);
-  font-size:clamp(18px,2.1vw,24px);letter-spacing:.03em;color:var(--ink);
-}
-.faq-q .ic{
-  font-family:var(--serif-soft);font-size:26px;color:var(--gold);flex-shrink:0;line-height:1;
-  transition:transform .5s var(--ease);
-}
-.faq-item.open .faq-q .ic{transform:rotate(45deg)}
-.faq-a{overflow:hidden;height:0}
-.faq-a p{padding:0 4px 26px;font-size:14.5px;line-height:1.85;color:var(--ink-soft);max-width:62ch}
 
 /* ==========================================================================
    CLOSING + FOOTER
@@ -831,8 +784,6 @@ footer .credit{margin-top:60px;font-size:10.5px;letter-spacing:.26em;text-transf
 /* --- touch devices ------------------------------------------------------- */
 /* nothing may hide behind :hover, and every target must be thumb-sized */
 @media (hover: none), (pointer: coarse) {
-  .tcard:hover{transform:none;box-shadow:none}
-  .tcard:active{transform:translateY(-2px)}
   .coin:hover{transform:translateX(-50%) scale(1)}
   nav .links a:not(.cta):hover::after{transform:scaleX(0)}
 
@@ -845,13 +796,11 @@ footer .credit{margin-top:60px;font-size:10.5px;letter-spacing:.26em;text-transf
   .btn:active{color:var(--mallige)}
   .ev-act:hover{background:transparent;color:var(--gold)}
   .ev-act:active{background:var(--gold);color:var(--mallige)}
-  .event[data-tint="madarangi"] .ev-act:hover,
+  .event[data-tint="madhrengi"] .ev-act:hover,
   .event[data-tint="reception"] .ev-act:hover{background:transparent;color:var(--gold-soft)}
 
   /* 44px-plus targets */
-  .faq-q{padding:22px 4px;min-height:66px}
   .ev-act{min-height:48px}
-  .tcard .tlink{min-height:38px;display:inline-flex;align-items:center}
   .scratch-skip{min-height:48px;display:flex;align-items:center;justify-content:center;width:max-content}
   nav .cta{padding:10px 0}
   footer .fshare{padding:16px 26px}
@@ -953,8 +902,6 @@ body.menu-open{overflow:hidden}
   .wish{padding:22px 18px}
   .venue-panel{margin-left:12px;margin-right:12px;padding:36px 20px 42px}
   .count-cell b{font-size:clamp(24px,8.8vw,40px)}
-  .tcard{padding:26px 20px 24px}
-  .faq-q{font-size:17px;gap:14px}
   .closing blockquote{font-size:24px}
   .sec-head{gap:14px}
 }
@@ -986,7 +933,7 @@ a:focus,button:focus,input:focus,select:focus,textarea:focus{outline-offset:3px}
 /* --- Windows high-contrast ----------------------------------------------- */
 @media (forced-colors: active) {
   .frame .veil{display:none}
-  .btn,.ev-act,.tcard,.faq-item{border-color:CanvasText}
+  .btn,.ev-act{border-color:CanvasText}
   .btn::before{display:none}
 }
 
@@ -998,7 +945,7 @@ a:focus,button:focus,input:focus,select:focus,textarea:focus{outline-offset:3px}
   body::after,#gate,nav,#mobileMenu,#petals,#dust,#music,
   .scroll-cue,.venue-art,.wishes,.closing .frame,
   .ev-actions,.scratch-wrap,.scratch-skip,.count-grid,
-  .event .ev-photo,.travel-grid,.inter .strand{display:none!important}
+  .event .ev-photo,.inter .strand{display:none!important}
   section,.inter{padding:14px 0!important;min-height:0!important;break-inside:avoid}
   .event{display:block!important;min-height:0!important;page-break-inside:avoid}
   .ev-body{background:#fff!important;color:#000!important;padding:10px 0!important}
@@ -1028,10 +975,6 @@ a:focus,button:focus,input:focus,select:focus,textarea:focus{outline-offset:3px}
   <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
   <symbol id="i-tick" viewBox="0 0 64 64"><circle cx="32" cy="32" r="27"/><path d="M21 33l8 8 15-17"/></symbol>
   <symbol id="i-kolam" viewBox="0 0 40 40"><path d="M2 38V14C2 7 7 2 14 2h24"/><path d="M8 38V17c0-5 4-9 9-9h21"/><circle cx="13" cy="13" r="2.4"/></symbol>
-  <symbol id="i-plane" viewBox="0 0 40 40"><path d="M20 4c1.6 0 2.6 1.6 2.6 3.6v7.2l12 7v3.4l-12-3.6v7.6l4 3v2.8L20 33l-6.6 1.6V31.8l4-3v-7.6l-12 3.6v-3.4l12-7V7.6C17.4 5.6 18.4 4 20 4z"/></symbol>
-  <symbol id="i-train" viewBox="0 0 40 40"><rect x="8" y="5" width="24" height="22" rx="5"/><path d="M8 15h24M12 32l-3 4M28 32l3 4"/><circle cx="14" cy="22" r="1.8"/><circle cx="26" cy="22" r="1.8"/></symbol>
-  <symbol id="i-bed" viewBox="0 0 40 40"><path d="M4 30V11M4 20h32v10M36 30v4M4 30v4"/><path d="M9 20v-4a3 3 0 0 1 3-3h5a3 3 0 0 1 3 3v4"/><path d="M20 20v-4a3 3 0 0 1 3-3h5a3 3 0 0 1 3 3v4"/></symbol>
-  <symbol id="i-car" viewBox="0 0 40 40"><path d="M5 26v-6l4-9a3 3 0 0 1 2.8-2h16.4A3 3 0 0 1 31 11l4 9v6"/><path d="M5 20h30"/><rect x="5" y="26" width="30" height="6" rx="2"/><circle cx="12" cy="32" r="2.4"/><circle cx="28" cy="32" r="2.4"/></symbol>
 </defs></svg>
 
 <!-- ===================== GATE — the tamboola tray ===================== -->
@@ -1126,8 +1069,6 @@ a:focus,button:focus,input:focus,select:focus,textarea:focus{outline-offset:3px}
   <div class="links">
     <a href="#events">Celebrations</a>
     <a href="#venue">Venue</a>
-    <a href="#travel">Travel</a>
-    <a href="#faq">FAQ</a>
   </div>
   <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
     <i></i><i></i><i></i>
@@ -1137,8 +1078,6 @@ a:focus,button:focus,input:focus,select:focus,textarea:focus{outline-offset:3px}
 <div id="mobileMenu" aria-label="Menu" role="dialog" aria-modal="true">
   <a href="#events">Celebrations</a>
   <a href="#venue">Venue</a>
-  <a href="#travel">Travel &amp; Stay</a>
-  <a href="#faq">FAQ</a>
   <span class="mm-kan">ಸ್ವಾಗತ</span>
 </div>
 
@@ -1203,7 +1142,7 @@ a:focus,button:focus,input:focus,select:focus,textarea:focus{outline-offset:3px}
 <!-- ===================== COUNTDOWN ===================== -->
 <section class="countdown dark" aria-labelledby="cdHead">
   <div class="sec-head"><span class="eyebrow line" id="cdHead"><span>The Countdown</span></span></div>
-  <p class="count-line line"><span>The muhurta is still a secret — scratch the gold to reveal it&hellip;</span></p>
+  <p class="count-line line"><span>The muhurta lies under the gold — scratch to uncover it&hellip;</span></p>
 
   <div class="scratch-wrap">
     <div class="scratch-under">
@@ -1228,7 +1167,7 @@ a:focus,button:focus,input:focus,select:focus,textarea:focus{outline-offset:3px}
 
   <div class="count-foot">
     <span class="rule"></span>
-    <p id="cdFoot">Until the dhare at Udupi</p>
+    <p id="cdFoot">Until the dhare in Udupi</p>
   </div>
 </section>
 
@@ -1262,17 +1201,6 @@ a:focus,button:focus,input:focus,select:focus,textarea:focus{outline-offset:3px}
   <div class="venue-pad"></div>
 </section>
 
-<!-- ===================== TRAVEL & STAY ===================== -->
-<section class="travel" id="travel">
-  <div class="sec-head">
-    <span class="eyebrow line"><span>Travel &amp; Stay</span></span>
-    <h2 class="display line"><span>About Mangaluru</span></h2>
-    <div class="orn"><span class="kan">ಪ್ರಯಾಣ</span></div>
-  </div>
-  <div class="travel-grid" id="travelGrid"></div>
-  <p class="travel-note line"><span id="travelNote"></span></p>
-</section>
-
 <!-- ===================== WISHES ===================== -->
 <section class="wishes dark" id="wishes">
   <div class="sec-head">
@@ -1284,7 +1212,7 @@ a:focus,button:focus,input:focus,select:focus,textarea:focus{outline-offset:3px}
     <form class="wish-form" id="wishForm">
       <div class="field">
         <label for="w-name">Your name</label>
-        <input type="text" id="w-name" name="wname" placeholder="Who is blessing them?" required />
+        <input type="text" id="w-name" name="wname" placeholder="Name as they will know you" required />
         <span class="err" id="e-wname" aria-live="polite"></span>
       </div>
       <div class="field">
@@ -1301,19 +1229,10 @@ a:focus,button:focus,input:focus,select:focus,textarea:focus{outline-offset:3px}
   </div>
 </section>
 
-<!-- ===================== FAQ ===================== -->
-<section class="faq" id="faq">
-  <div class="sec-head">
-    <span class="eyebrow line"><span>Good to know</span></span>
-    <h2 class="display line"><span>Questions &amp; answers</span></h2>
-  </div>
-  <div class="faq-list" id="faqList"></div>
-</section>
-
 <!-- ===================== CLOSING ===================== -->
 <section class="closing dark">
   <div class="frame" data-art="closing" data-img="assets/closing.jpg" data-parallax="8"><div class="veil"></div></div>
-  <blockquote class="line"><span id="closingQuote">&ldquo;Whatever the tide brings — I want to meet it beside you.&rdquo;<small id="closingBy">Prathik &amp; Harshitha</small></span></blockquote>
+  <blockquote class="line"><span id="closingQuote">&ldquo;Whatever the tide brings — we want to meet it beside you.&rdquo;<small id="closingBy">Prathik &amp; Harshitha</small></span></blockquote>
 </section>
 
 <!-- ===================== FOOTER ===================== -->
@@ -1323,7 +1242,7 @@ a:focus,button:focus,input:focus,select:focus,textarea:focus{outline-offset:3px}
   <p class="tag" id="hashtag">#pHmatched</p>
   <p class="kan fkan" id="footKan">ಶುಭಂ ಭವತು</p>
   <button class="fshare" id="shareBtn">Share this invitation <svg aria-hidden="true"><use href="#i-share"/></svg></button>
-  <p class="credit" id="credit">Made with love on the Konkan coast</p>
+  <p class="credit" id="credit">Made with love in Tulu Nadu</p>
 </footer>
 
 <button id="music" aria-label="Play background music" aria-pressed="false">
@@ -1358,7 +1277,7 @@ const CONFIG = {
   dateLabel:    "23 December 2026",
   dateTease:    "December 2026",                // shown before the scratch reveal
   muhurtaShort: "Dhare Muhurta · 11:28 AM",
-  countdownFoot:"Until the dhare at Udupi",
+  countdownFoot:"Until the dhare in Udupi",
 
   /* ---------- where the wishes wall posts ---------- */
   // "" = DEMO MODE (saves to this browser only, nothing leaves the device).
@@ -1373,14 +1292,14 @@ const CONFIG = {
   /* ---------- the venue of the wedding day ---------- */
   venue: {
     name: "Townhall Udupi",
-    addr: "Sri Aroor Lakshminarayana Rao Memorial Town Hall, Brahmagiri, Udupi, Karnataka — where the dhare will be poured, and the reception follows straight after.",
+    addr: "Sri Aroor Lakshminarayana Rao Memorial Town Hall, Brahmagiri, Udupi. The dhare is poured here, and the reception follows in the same hall.",
     maps: "Sri Aroor Lakshminarayana Rao Memorial Hall, Udupi"
   },
 
   /* ---------- the celebrations ---------- */
   events: [
-    { key:"madarangi", kan:"ಮೆಹಂದಿ", ghost:"ಮೆಹಂದಿ",
-      name:"Madarengi", art:"evMadarangi", img:"assets/event-madarengi.jpg",
+    { key:"madhrengi", kan:"ಮಧರೆಂಗಿ", ghost:"ಮಧರೆಂಗಿ",
+      name:"Madhrengi", art:"evMadhrengi", img:"assets/event-madhrengi.jpg",
       desc:"Henna, music, and every cousin with a song they have been rehearsing since the monsoon. An easy evening before the long day \u2014 come hungry and stay late.",
       date:"Tuesday, 22 December 2026", time:"6:00 PM onwards",
       venue:"Hotel Pooja Parivar", venueSub:"Kinnigoli Road, Haleangadi",
@@ -1398,16 +1317,16 @@ const CONFIG = {
       start:"2026-12-23T06:30:00+05:30", end:"2026-12-23T09:00:00+05:30" },
 
     { key:"dhare", kan:"ದಾರೆ", ghost:"ದಾರೆ",
-      name:"The Dhare", art:"evDhare", img:"assets/event-dhare.jpg",
-      desc:"The heart of it. A gold nanya rests in Harshitha's palm, Prathik's hands close over hers, and her parents pour the holy water from the chembu — the kombu sounds, the mangalsutra is tied, and two families become one.",
+      name:"Dhare", art:"evDhare", img:"assets/event-dhare.jpg",
+      desc:"The heart of it. A gold nanya rests in Harshitha's palm, Prathik's hands close over hers, and her parents pour the holy water from the chembu — the kombu sounds, and the mangalsutra is tied.",
       date:"Wednesday, 23 December 2026", time:"Dhare Muhurta 11:28 AM",
       venue:"Townhall Udupi", venueSub:"Sri Aroor Lakshminarayana Rao Memorial Town Hall · Brahmagiri, Udupi",
       dress:"Traditional",
       maps:"Sri Aroor Lakshminarayana Rao Memorial Hall, Udupi",
       start:"2026-12-23T10:30:00+05:30", end:"2026-12-23T15:00:00+05:30" },
 
-    { key:"reception", kan:"ಸ್ವಾಗತ", ghost:"ಸ್ವಾಗತ",
-      name:"The Reception", art:"evReception", img:"assets/event-reception.jpg",
+    { key:"reception", kan:"ಆರತಕ್ಷತೆ", ghost:"ಆರತಕ್ಷತೆ",
+      name:"Reception", art:"evReception", img:"assets/event-reception.jpg",
       desc:"No need to go anywhere or change a thing — lunch flows straight into the reception, right there in the same hall. Blessings, photographs, and a plate that keeps finding its way back to full.",
       date:"Wednesday, 23 December 2026", time:"1:00 PM onwards",
       venue:"Townhall Udupi", venueSub:"Sri Aroor Lakshminarayana Rao Memorial Town Hall · Brahmagiri, Udupi",
@@ -1416,60 +1335,19 @@ const CONFIG = {
       start:"2026-12-23T13:00:00+05:30", end:"2026-12-23T17:00:00+05:30" }
   ],
 
-  /* ---------- travel & stay ---------- */
-  travelNote: "December is the kindest month on the coast — dry, around 31°C by day and a comfortable 22°C after dark, with no rain to plan around. Light cottons for the daytime, and you may want a shawl for the early morning and late evening.",
-  travel: [
-    { icon:"i-plane", kind:"Fly in", name:"Mangaluru International Airport", code:"IXE",
-      text:"The nearest airport, with direct flights from Bengaluru, Mumbai, Delhi and the Gulf. It sits close to the Mukka side of things, and a short drive from Udupi itself. Prepaid taxis run from just outside arrivals.",
-      dist:"", maps:"Mangalore International Airport" },
-    { icon:"i-train", kind:"By rail", name:"Surathkal Railway Station", code:"",
-      text:"On the Konkan Railway line, and the most convenient stop for the Mukka and Haleangadi side of the functions. A short drive on to Udupi from here.",
-      dist:"", maps:"Surathkal Railway Station" },
-    { icon:"i-bed", kind:"Where to stay", name:"Hotel Pappilon", code:"",
-      text:"Where we have a block of rooms held for our reserved guests, and also where the shuttle bus picks up for every function.",
-      dist:"Shuttle pickup point", maps:"Hotel Pappilon" },
-    { icon:"i-car", kind:"Getting around", name:"The shuttle bus", code:"",
-      text:"A shuttle will run from Hotel Pappilon to the venue hall, from Mukka-to-Udupi on the wedding day. Exact pickup timings will follow by WhatsApp closer to the date.",
-      dist:"Pickup at Hotel Pappilon", maps:"Hotel Pappilon" }
-  ],
-
   /* ---------- seed wishes (a wall is never shown empty) ---------- */
   seedWishes: [
-    { name:"Sharada Kamath", when:"12 Jul 2026",
+    { name:"Sharada Kamath", when:"4 Sep 2026",
       msg:"May the water poured at your dhare keep you cool-headed and warm-hearted for the rest of your lives. We have watched you grow up, Prathik \u2014 bringing Harshitha home is the best thing you have done yet." },
-    { name:"Vinay Shetty", when:"18 Jul 2026",
-      msg:"From missing the last bus at Panambur to very nearly missing your own muhurta if you two keep talking. Some things do not change. Could not be happier for you both." },
-    { name:"Deepika Rai", when:"2 Aug 2026",
+    { name:"Deepika Rai", when:"12 Sep 2026",
       msg:"Harshitha, I have never seen you laugh the way you do around him. That is all a friend really needs to know. A lifetime of it to you both." },
-    { name:"Sudhakar & Vasanthi Pai", when:"9 Aug 2026",
-      msg:"Forty-one years ago our elders poured the same water over our joined hands. Our only advice: eat one meal together every day, however busy the week gets. Everything else sorts itself out." },
-    { name:"Nikhil Bhandary", when:"16 Aug 2026",
-      msg:"Booked my leave the day the date was announced. Save me a seat at the madarengi and a banana leaf at the lunch." }
-  ],
-
-  /* ---------- FAQ ---------- */
-  faq: [
-    { q:"What exactly is the Dhare?",
-      a:"It is the heart of a Tulu Nadu wedding, and it may be new to you if you have only been to weddings up north. A gold coin — the nanya — is placed in the bride's palm; the groom's hands close over hers; and the bride's parents pour holy water from a spouted vessel called a chembu over their joined hands while the elders bless them. The kombu horn is sounded, the mangalsutra is tied, and that is the marriage. There is no long walk around the fire here — the water is the vow." },
-    { q:"When should I RSVP by?",
-      a:"Kindly confirm by 5 December 2026. It genuinely helps — lunch is cooked to a headcount and served on banana leaves, so every seat is a real plate. The form above takes a minute, or send a WhatsApp if that is easier." },
-    { q:"What should I wear?",
-      a:"Madarengi — no dress code at all, wear what you like. Arishina — yellow, and please nothing you would be sad to stain. Dhare — traditional, silks in ivory, gold and pastels. Reception — no separate dress code; whatever you wear to the dhare carries straight through, since the two run back to back in the same hall. Above all, wear what lets you eat properly and sit on the floor if you would like to." },
-    { q:"What will the weather be like?",
-      a:"December is the best of the coastal year — dry and clear, around 31°C by day and a pleasant 22°C at night, with a steady sea breeze and no rain to work around. Light cottons in the day, and a shawl is welcome for the early-morning rituals and after dark." },
-    { q:"What time should I actually arrive on the wedding day?",
-      a:"The 23rd starts early and moves. The Arishina is at 6:30 AM at Panchawati House in Mukka, and the dhare is at 11:28 AM in Udupi — about 35 km up NH66, which is roughly 45 minutes in the morning. If you are coming to both, plan to leave Mukka by 9:45 AM. The muhurta does not wait, so please be seated in Udupi by 10:50 AM; the dhare itself is over in a few minutes and it is the one thing you will not want to miss. Lunch is served on banana leaves from 1:00 PM, and the reception follows immediately in the very same hall — so once you are in Udupi for the muhurta, there is nowhere else to be and nothing to change into for the rest of the day." },
-    { q:"Can I bring my children? A plus one?",
-      a:"Children are very welcome — there will be a great many of them. For plus ones, please go by what is written on your invitation, and if you are unsure, just ask us; we would rather you asked than wondered." },
-    { q:"What about gifts?",
-      a:"Your blessings are the gift, and coming all the way to the coast is more than enough. If you would still like to give something, a shagun envelope on the day is the tradition here — nothing more is expected." },
-    { q:"Is there parking at the mantapa?",
-      a:"Yes, there is parking below the mantapa, though it fills quickly before the muhurta. Shuttle will run from The Pappiloan Crown Hotel, Mukka Checkpost, Mangalore" }
+    { name:"Sudhakar & Vasanthi Pai", when:"19 Sep 2026",
+      msg:"Forty-one years ago our elders poured the same water over our joined hands. Our only advice: eat one meal together every day, however busy the week gets. Everything else sorts itself out." }
   ],
 
   /* ---------- closing ---------- */
-  closingQuote: "Whatever the tide brings — I want to meet it beside you.",
-  credit: "Made with love on the Konkan coast"
+  closingQuote: "Whatever the tide brings — we want to meet it beside you.",
+  credit: "Made with love in Tulu Nadu"
 };
 
 /* ==========================================================================
@@ -1765,7 +1643,7 @@ const ART = (function () {
       '<circle cx="352" cy="586" r="15" fill="#8A4F26"/><circle cx="446" cy="584" r="16" fill="#8A4F26"/>' +
       mallige(268, 542, 17) + mallige(536, 548, 17) + mallige(400, 500, 14));
   };
-  S.evMadarangi = function () {
+  S.evMadhrengi = function () {
     return evBase("#3A2A1B", "#241A11", P.hennaL,
       '<circle cx="400" cy="450" r="268" fill="#4A3421" opacity=".55"/>' +
       kolamGrid(400, 450, 250, P.goldL, .3) +
@@ -1852,7 +1730,7 @@ const ART = (function () {
   /* ---- motif icons for the event panels (stroke only) ---- */
   const MOTIF = {
     nischaya: '<svg viewBox="0 0 54 54"><path d="M27 46 C13 38 6 24 14 12 C19 4 27 2 27 -2 C27 2 35 4 40 12 C48 24 41 38 27 46 Z"/><path d="M27 44 V8"/><path d="M27 22 C21 18 18 14 17 10"/><path d="M27 22 C33 18 36 14 37 10"/><path d="M27 33 C22 30 19 26 18 22"/><path d="M27 33 C32 30 35 26 36 22"/></svg>',
-    madarangi: '<svg viewBox="0 0 54 54"><path d="M27 6 C40 11 45 22 41 33 C38 42 28 47 21 43 C15 40 14 33 18 29 C21 26 27 27 28 32"/><circle cx="31" cy="17" r="2"/><circle cx="36" cy="24" r="1.6"/><circle cx="37" cy="32" r="1.3"/><circle cx="27" cy="6" r="1.6"/></svg>',
+    madhrengi: '<svg viewBox="0 0 54 54"><path d="M27 6 C40 11 45 22 41 33 C38 42 28 47 21 43 C15 40 14 33 18 29 C21 26 27 27 28 32"/><circle cx="31" cy="17" r="2"/><circle cx="36" cy="24" r="1.6"/><circle cx="37" cy="32" r="1.3"/><circle cx="27" cy="6" r="1.6"/></svg>',
     arishina: '<svg viewBox="0 0 54 54"><path d="M9 24 q18 30 36 0"/><path d="M7 24 h40"/><path d="M17 24 v-8 a10 10 0 0 1 20 0 v8"/><path d="M27 12 V4"/><circle cx="27" cy="30" r="4"/><path d="M14 46 h26"/></svg>',
     dhare: '<svg viewBox="0 0 54 54"><path d="M12 10 q0 14 10 14 q10 0 10 -14 q0 -4 -10 -4 q-10 0 -10 4 Z"/><path d="M31 8 l9 -4 2 5 -9 4"/><path d="M34 24 q6 12 0 20"/><path d="M16 38 q11 -6 22 0 q4 5 -2 8 q-9 4 -18 0 q-5 -3 -2 -8 Z"/><circle cx="29" cy="43" r="3"/></svg>',
     reception: '<svg viewBox="0 0 54 54"><path d="M27 4 v10"/><path d="M11 14 q16 12 32 0"/><path d="M6 14 q21 18 42 0"/><path d="M13 20 v5 M21 25 v5 M27 27 v5 M33 25 v5 M41 20 v5"/><path d="M8 42 q19 -8 38 0 q-19 8 -38 0 Z"/><path d="M9 42 h36"/></svg>'
@@ -1999,7 +1877,6 @@ function renderStatics() {
   $("#venueName").textContent = c.venue.name;
   $("#venueAddr").textContent = c.venue.addr;
   $("#venueBtn").href = mapsUrl(c.venue.maps);
-  $("#travelNote").textContent = c.travelNote;
   $("#closingQuote").innerHTML = "&ldquo;" + esc(c.closingQuote) + "&rdquo;<small>" + esc(leadName()) + " &amp; " + esc(secondName()) + "</small>";
   $("#footMono").innerHTML = monogramSvg(112, "#CDAE72");
   $("#footNames").innerHTML = names;
@@ -2037,31 +1914,6 @@ function renderEvents() {
     '</article>';
   }).join("");
 }
-
-function renderTravel() {
-  $("#travelGrid").innerHTML = CONFIG.travel.map(function (t) {
-    return '<article class="tcard">' +
-      '<svg class="ticon" aria-hidden="true"><use href="#' + esc(t.icon) + '"/></svg>' +
-      '<div class="tkind">' + esc(t.kind) + '</div>' +
-      '<h4>' + esc(t.name) + (t.code ? ' <span style="opacity:.5">· ' + esc(t.code) + '</span>' : '') + '</h4>' +
-      '<p>' + esc(t.text) + '</p>' +
-      (t.dist ? '<div class="tdist">' + esc(t.dist) + '</div>' : '') +
-      '<a class="tlink" target="_blank" rel="noopener" href="' + mapsUrl(t.maps) + '">Open in maps</a>' +
-    '</article>';
-  }).join("");
-}
-
-
-function renderFaq() {
-  $("#faqList").innerHTML = CONFIG.faq.map(function (f, i) {
-    return '<div class="faq-item">' +
-      '<button class="faq-q" type="button" aria-expanded="false" aria-controls="faq-a-' + i + '" id="faq-q-' + i + '">' +
-        esc(f.q) + '<span class="ic" aria-hidden="true">+</span></button>' +
-      '<div class="faq-a" id="faq-a-' + i + '" role="region" aria-labelledby="faq-q-' + i + '"><p>' + esc(f.a) + '</p></div>' +
-    '</div>';
-  }).join("");
-}
-
 
 /* ==========================================================================
    GATE — the tamboola opens
@@ -2428,7 +2280,7 @@ function initReveals() {
   });
 
   const soft = ".ev-desc,.ev-meta,.ev-actions,.ev-idx,.venue-panel .addr,.venue-panel .btn," +
-               ".faq-item,.tcard,.wish-form,.wish,.travel-note,.scratch-wrap,.scratch-skip,.count-foot";
+               ".wish-form,.wish,.scratch-wrap,.scratch-skip,.count-foot";
   $$(soft).forEach(function (el) {
     reveal(el, el, "translateY(30px)", "translateY(0)", 1150);
   });
@@ -2732,33 +2584,6 @@ function initCanvases() {
 }
 
 /* ==========================================================================
-   FAQ ACCORDION
-   ========================================================================== */
-function initFaq() {
-  $$(".faq-item").forEach(function (item) {
-    const q = $(".faq-q", item), a = $(".faq-a", item);
-    q.addEventListener("click", function () {
-      const isOpen = item.classList.contains("open");
-      $$(".faq-item.open").forEach(function (o) {
-        o.classList.remove("open");
-        $(".faq-q", o).setAttribute("aria-expanded", "false");
-        const oa = $(".faq-a", o);
-        oa.style.height = oa.scrollHeight + "px";
-        requestAnimationFrame(function () { oa.style.transition = "height .5s " + EASE; oa.style.height = "0px"; });
-      });
-      if (!isOpen) {
-        item.classList.add("open");
-        q.setAttribute("aria-expanded", "true");
-        a.style.transition = "height .55s " + EASE;
-        a.style.height = a.scrollHeight + "px";
-        const clear = function () { if (item.classList.contains("open")) a.style.height = "auto"; a.removeEventListener("transitionend", clear); };
-        a.addEventListener("transitionend", clear);
-      }
-    });
-  });
-}
-
-/* ==========================================================================
    LIGHTBOX
    ========================================================================== */
 
@@ -3042,7 +2867,7 @@ function initDeviceCheck() {
       ["reduced motion", REDUCED ? "ON" : "off"],
       ["coarse pointer", matchMedia("(pointer:coarse)").matches ? "yes" : "no"],
       ["art drawn", $$(".frame .art svg").length + " / " + $$(".frame").length],
-      ["sections", $$("section").length + " · events " + $$(".event").length + " · faq " + $$(".faq-item").length],
+      ["sections", $$("section").length + " · events " + $$(".event").length],
       ["tap targets <40px", small + " of " + targets],
       ["fonts", document.fonts && document.fonts.status ? document.fonts.status : "n/a"]
     ];
@@ -3066,8 +2891,6 @@ function initDeviceCheck() {
   renderStatics();
   fitNames();
   renderEvents();
-  renderTravel();
-  renderFaq();
   initPersonalise();
 
   $$(".frame").forEach(hydrateFrame);
@@ -3076,7 +2899,6 @@ function initDeviceCheck() {
   initReveals();
   initScratch();
   initCanvases();
-  initFaq();
   initCalendar();
   initWishes();
   initShare();
