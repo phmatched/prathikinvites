@@ -162,7 +162,7 @@ interactions).
 
 - **Art engine** — `ART` draws every scene as inline SVG from a small library
   of coastal primitives (palms, gopuram, tile roofs, jasmine, betel leaves,
-  the dhare chembu, oil lamps).
+  the dhaare chembu, oil lamps).
 - **Motion kernel** — `Motion` replaces GSAP/ScrollTrigger/Lenis with the Web
   Animations API, one `IntersectionObserver`, and a single `requestAnimationFrame`
   loop for parallax. Nothing is loaded from a CDN, so the page works offline
