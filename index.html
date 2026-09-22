@@ -128,6 +128,11 @@ section{position:relative;padding:clamp(88px,12vw,168px) clamp(22px,7vw,110px)}
 .sec-head .display{font-size:clamp(38px,5.6vw,76px)}
 .orn{display:flex;align-items:center;gap:16px}
 .orn::before,.orn::after{content:"";width:46px;height:1px;background:var(--gold);opacity:.55}
+.sec-note{
+  font-family:var(--serif-soft);font-style:italic;
+  font-size:clamp(15px,1.6vw,19px);letter-spacing:.05em;
+  color:var(--gold-soft);
+}
 
 /* kolam corner ornament, used on bordered panels */
 .kolam{position:absolute;width:34px;height:34px;opacity:.5;pointer-events:none;color:var(--gold)}
@@ -1241,6 +1246,7 @@ a:focus,button:focus,input:focus,select:focus,textarea:focus{outline-offset:3px}
     <span class="eyebrow line"><span>The Wishes Wall</span></span>
     <h2 class="display line"><span>Leave them a blessing</span></h2>
     <div class="orn"><span class="kan">ಆಶೀರ್ವಾದ</span></div>
+    <p class="sec-note line"><span id="giftNote">Presents in blessings only</span></p>
   </div>
   <div class="wish-inner">
     <form class="wish-form" id="wishForm">
@@ -1318,6 +1324,9 @@ const CONFIG = {
   // Paste a Formspree or Google Apps Script URL here to collect real wishes.
   rsvpEndpoint: "",
 
+  // the note under the wishes heading. Set to "" to hide the line entirely.
+  giftNote: "Presents in blessings only",
+
   /* ---------- optional ambient music ---------- */
   // Drop a file at this path (nadaswaram, veena, or a soft instrumental)
   // and the player appears by itself. If it is missing, the control hides.
@@ -1345,7 +1354,7 @@ const CONFIG = {
       name:"Arishina Shastra", art:"evArishina", img:"assets/event-arishina.png",
       desc:"With the first rays of sunshine and the golden glow of haldi, we invite you to join us for a morning filled with love, laughter and blessings.",
       date:"Wednesday, 23 December 2026", time:"6:30 AM onwards",
-      venue:"Panchawati House", venueSub:"Mukka Checkpost, Mangaluru",
+      venue:"Panchawati", venueSub:"Mukka Checkpost, Mangaluru",
       dress:"",
       maps:"Mukka Checkpost, Mangaluru",
       start:"2026-12-23T06:30:00+05:30", end:"2026-12-23T09:00:00+05:30" },
@@ -1911,6 +1920,8 @@ function renderStatics() {
   $("#venueName").textContent = c.venue.name;
   $("#venueAddr").textContent = c.venue.addr;
   $("#venueBtn").href = mapsUrl(c.venue.maps);
+  if (c.giftNote) $("#giftNote").textContent = c.giftNote;
+  else $("#giftNote").closest(".sec-note").remove();
   $("#closingQuote").innerHTML = "&ldquo;" + esc(c.closingQuote) + "&rdquo;<small>" + esc(leadName()) + " &amp; " + esc(secondName()) + "</small>";
   $("#footMono").innerHTML = monogramSvg(112, "#CDAE72");
   $("#footNames").innerHTML = names;
