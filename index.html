@@ -499,8 +499,9 @@ header.hero{
 .event[data-tint="arishina"]  .ev-body{background:linear-gradient(160deg,#FBF2D6,#F6E7BC)}
 .event[data-tint="dhare"]     .ev-body{background:linear-gradient(160deg,#FBF6EE,#F4E8DC)}
 .event[data-tint="reception"] .ev-body{background:linear-gradient(165deg,#153B34,#102B26);color:var(--shell)}
-.event[data-tint="madhrengi"] .ev-desc,.event[data-tint="reception"] .ev-desc{color:#C9BEB0}
-.event[data-tint="reception"] .ev-desc{color:#B9CBBF}
+.event[data-tint="madhrengi"] .ev-desc,.event[data-tint="reception"] .ev-desc,
+.event[data-tint="madhrengi"] .ev-note,.event[data-tint="reception"] .ev-note{color:#C9BEB0}
+.event[data-tint="reception"] .ev-desc,.event[data-tint="reception"] .ev-note{color:#B9CBBF}
 .event[data-tint="madhrengi"] .ev-meta dt,.event[data-tint="reception"] .ev-meta dt{color:var(--gold-soft)}
 .event[data-tint="madhrengi"] .ev-motif svg,.event[data-tint="reception"] .ev-motif svg{stroke:var(--gold-soft)}
 .event[data-tint="madhrengi"] .ev-act,.event[data-tint="reception"] .ev-act{color:var(--gold-soft);border-color:rgba(205,174,114,.6)}
@@ -549,6 +550,10 @@ header.hero{
   line-height:1.06;letter-spacing:.03em;margin-bottom:24px;
 }
 .ev-desc{font-size:15px;line-height:1.8;color:var(--ink-soft);max-width:44ch;margin-bottom:34px}
+.ev-note{
+  font-family:var(--serif-soft);font-style:italic;font-size:15.5px;line-height:1.7;
+  color:var(--ink-soft);max-width:44ch;margin-bottom:30px;
+}
 .ev-meta{display:grid;grid-template-columns:max-content 1fr;gap:12px 26px;font-size:14.5px;max-width:470px;margin-bottom:32px}
 .ev-meta dt{font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);padding-top:5px}
 .ev-meta dd{font-family:var(--serif);font-size:18.5px;letter-spacing:.04em}
@@ -989,7 +994,7 @@ a:focus,button:focus,input:focus,select:focus,textarea:focus{outline-offset:3px}
   .event{display:block!important;min-height:0!important;page-break-inside:avoid}
   .ev-body{background:#fff!important;color:#000!important;padding:10px 0!important}
   .ev-body h3{font-size:20pt!important;margin-bottom:8px!important}
-  .ev-ghost,.ev-motif,.ev-desc{display:none!important}
+  .ev-ghost,.ev-motif,.ev-desc,.ev-note{display:none!important}
   .hero{min-height:0!important;padding:0 0 18px!important}
   .hero h1.display{font-size:30pt!important}
   .hero-arch{width:150px!important}
@@ -1344,6 +1349,7 @@ const CONFIG = {
     { key:"madhrengi", kan:"ಮಧರೆಂಗಿ", ghost:"ಮಧರೆಂಗಿ",
       name:"Madhrengi", art:"evMadhrengi", img:"assets/event-madhrengi.png",
       desc:"Let the music play, the lights sparkle, and the celebrations begin. With hearts full of joy and excitement, we invite you to join us for an evening of dance, music, laughter and endless sparkle.",
+      note:"Your presence will make our celebration sparkle even brighter.",
       date:"Tuesday, 22 December 2026", time:"6:00 PM onwards",
       venue:"Hotel Pooja Parivar", venueSub:"Kinnigoli Road, Haleangadi",
       dress:"",
@@ -1353,6 +1359,7 @@ const CONFIG = {
     { key:"arishina", kan:"ಅರಿಶಿನ", ghost:"ಅರಿಶಿನ",
       name:"Arishina Shastra", art:"evArishina", img:"assets/event-arishina.png",
       desc:"With the first rays of sunshine and the golden glow of haldi, we invite you to join us for a morning filled with love, laughter and blessings.",
+      note:"Let us bloom, glow and celebrate together.",
       date:"Wednesday, 23 December 2026", time:"6:30 AM onwards",
       venue:"Panchawati", venueSub:"Mukka Checkpost, Mangaluru",
       dress:"",
@@ -1362,6 +1369,7 @@ const CONFIG = {
     { key:"dhare", kan:"ಧಾರೆ", ghost:"ಧಾರೆ",
       name:"Dhaare", art:"evDhare", img:"assets/event-dhare.png",
       desc:"As sacred water flows, two lives are blessed to flow together. A promise is made, a new journey begins, and the Karimani is tied as a sacred mark of love, commitment, and togetherness.",
+      note:"A cherished moment where two hearts unite, embracing a lifetime of shared dreams, love, and blessings.",
       date:"Wednesday, 23 December 2026", time:"Dhaare Muhurta 11:28 AM",
       venue:"Townhall Udupi", venueSub:"Sri Aroor Lakshminarayana Rao Memorial Town Hall · Brahmagiri, Udupi",
       dress:"Traditional",
@@ -1371,6 +1379,7 @@ const CONFIG = {
     { key:"reception", kan:"ಆರತಕ್ಷತೆ", ghost:"ಆರತಕ್ಷತೆ",
       name:"Reception", art:"evReception", img:"assets/event-reception.png",
       desc:"No need to go anywhere or change a thing — lunch flows straight into the reception, right there in the same hall. Blessings, photographs, and a plate that keeps finding its way back to full.",
+      note:"Your blessings will coomplete the celebration.",
       date:"Wednesday, 23 December 2026", time:"1:00 PM onwards",
       venue:"Townhall Udupi", venueSub:"Sri Aroor Lakshminarayana Rao Memorial Town Hall · Brahmagiri, Udupi",
       dress:"",
@@ -1950,6 +1959,7 @@ function renderEvents() {
           '<dt>Venue</dt><dd>' + esc(ev.venue) + '<small>' + esc(ev.venueSub) + '</small></dd>' +
           (ev.dress ? '<dt>Dress</dt><dd>' + esc(ev.dress) + '</dd>' : '') +
         '</dl>' +
+        (ev.note ? '<p class="ev-note">' + esc(ev.note) + '</p>' : '') +
         '<div class="ev-actions">' +
           '<a class="ev-act" target="_blank" rel="noopener" href="' + mapsUrl(ev.maps) + '"><svg aria-hidden="true"><use href="#i-pin"/></svg>Directions</a>' +
           '<button class="ev-act" type="button" data-ics="' + i + '"><svg aria-hidden="true"><use href="#i-cal"/></svg>Add to calendar</button>' +
@@ -2324,7 +2334,7 @@ function initReveals() {
     revealFrame(f);
   });
 
-  const soft = ".ev-desc,.ev-meta,.ev-actions,.ev-idx,.venue-panel .addr,.venue-panel .btn," +
+  const soft = ".ev-desc,.ev-note,.ev-meta,.ev-actions,.ev-idx,.venue-panel .addr,.venue-panel .btn," +
                ".wish-form,.wish,.scratch-wrap,.scratch-skip,.count-foot";
   $$(soft).forEach(function (el) {
     reveal(el, el, "translateY(30px)", "translateY(0)", 1150);
